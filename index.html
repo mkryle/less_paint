@@ -1,0 +1,54 @@
+<html>
+<title>The Lamp Button</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+<!-- <link href="style.css" rel="stylesheet"> -->
+</head>
+<body>
+	<style>
+		.pixel {
+			height: 50px;
+			width: 60px;
+			padding: 4px;
+		}
+	</style>
+<button onclick="less_paint_pixels()"> drawwup </button>
+
+<div id="load">
+
+</div>
+
+
+<script>
+
+
+	function on() { 
+
+}
+
+
+function less_paint_pixels() {
+
+	let i;
+	for (i = 0; i < 10; i++) {
+	let div = document.createElement("div")
+	div.className = "pixel"
+	div.id = i
+	div.style.width = "50px;"
+	div.style.height = "50px;"
+	div.style.backgroundColor = "red"
+	div.style.display = "inline"
+	document.getElementById("load").appendChild(div)	
+	}
+
+
+}
+
+
+</script>
+</body>
+</html>
