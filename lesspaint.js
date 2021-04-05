@@ -1,6 +1,7 @@
   new Vue({
   
     data: {
+
       currentColor: "black",
 
       theColorBlack: "black",
@@ -13,41 +14,53 @@
 
     },
     methods: {
+
        load_less_paint_pixels() {
+
             let i
+
              for (i = 0; i < 300; i++) {
                  let j
+
                      for (j = 0; j < 300; j++) {
                          let div = document.createElement("div")
                          div.className = "pixel"
                          div.id = i + "." + j
-                         div.setAttribute('onmouseover', 'drawStuff('+ i +'.'+j +')')
+                         div.setAttribute('onmouseover', 'drawStuff("'+ i +'.'+j +'")')
                          document.getElementById("load").appendChild(div)
                         }
+
              let hr = document.createElement("hr")
              document.getElementById("load").appendChild(hr)
              }
+
         },
+
         pickBlack(){
           currentColor = theColorBlack
           console.log('black')
         },
+
         pickWhite(){
           currentColor = theColorWhite
           console.log('white')
         },
+        
         pickRed(){
           currentColor = theColorRed
           console.log('red')
         },
+
         pickBlue(){
           currentColor = theColorBlue
           console.log('blue')
         },
+
         pickGreen(){
           currentColor = theColorGreen
           console.log('green')
         },
+
         pickYellow(){
           currentColor = theColorYellow
           console.log('yellow')
@@ -62,9 +75,18 @@
        },
 
     el: '#app',
+
   })
 
-  function drawStuff(something){
+  function drawStuff(something){     //    work in progress
+
     console.log(something)
 
+    if (onmousedown) { 
+
+    document.getElementById(something)
+    something.onmousedown = something.style.backgroundColor = "red"
+    
   }
+    }
+  
