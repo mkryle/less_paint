@@ -36,7 +36,7 @@
       let pixels = document.getElementsByClassName("pixel")
       pixels.setAttribute('onmousedown', drawStuff())
       function drawStuff(){
-        alert('hi')
+        // todo the stuff here
       }
        },
 
