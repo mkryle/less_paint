@@ -7,72 +7,116 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 <!-- <link href="style.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
 	<style>
-	</style>
+           
+        *  {
+            margin: 0;
+            padding: 0;
+        }
 
-<button onclick="less_paint_pixels()"> drawwup </button>
+        html {
+            background-color: #e6e6e6;
+        }
+        hr
+        { 
+            height: 1px; 
+            visibility: hidden; 
+            margin-bottom: -3px;
+            clear:both;
+        }
+        .pixel {
+            min-width: 2px;
+            min-height: 2px;
+            background-color: #ffdead;
+            float: left;
+        }
+
+    #theColorBlack {
+        background-color: black;
+        border: none;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 10px;
+    }
+    #theColorWhite {
+        background-color: white;
+        border: none;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 10px;
+    }
+    #theColorRed {
+        background-color: red;
+        border: none;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 10px;
+    }
+    #theColorBlue {
+        background-color: blue;
+        border: none;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 10px;
+    }
+    #theColorGreen {
+        background-color: green;
+        border: none;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 10px;
+    }
+    #theColorYellow {
+        background-color: yellow;
+        border: none;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 10px;
+    }
+    #colorPick {
+        background-color: grey;
+        display: inline;
+        min-height: 100px;
+        padding: 20px;
+        margin: 10px;
+    }
+    p {
+        padding: 20px;
+        margin: 10px;
+        display: inline;
+    }
+    #new {
+        padding: 20px;
+        margin: 10px;
+        display: inline;
+    }
+    #load {
+        margin: 40px;
+    }
+    
+    </style>
+<div id="app">
+
+<button id="new" v-on:click="load_less_paint_pixels()">New Palette</button>
+
+<p>Choose color:</p> 
+<div id="colorPick">
+<button id="theColorBlack">&nbsp;</button>
+<button id="theColorWhite">&nbsp;</button>
+<button id="theColorRed">&nbsp;</button>
+<button id="theColorBlue">&nbsp;</button>
+<button id="theColorGreen">&nbsp;</button>
+<button id="theColorYellow">&nbsp;</button>
+</div>
 
 <div id="load">
 
-</div>
+</div> <!-- /load -->
 
-
-<script>
-	
-	function on() { 
-}
-
-
-function less_paint_pixels() {
-
-	let i
-		for (i = 0; i < 100; i++) {
-		let div = document.createElement("div")
-		div.className = "pixel"
-		div.id = i
-		div.style.width = "50px;"
-		div.style.height = "50px;"
-		div.style.backgroundColor = "red"
-		div.style.display = "inline"
-		document.getElementById("load").appendChild(div)	
-		}
-
-	let br = document.createElement("br")
-	document.getElementById("load").appendChild(br)
-
-	
-	let j
-		for (j = 100; j < 200; j++) {
-		let div = document.createElement("div")
-		div.className = "pixel"
-		div.id = j
-		div.style.width = "50px;"
-		div.style.height = "50px;"
-		div.style.backgroundColor = "red"
-		div.style.display = "inline"
-		document.getElementById("load").appendChild(div)	
-		}
-
-	let br = document.createElement("br")
-	document.getElementById("load").appendChild(br)
-
-
-	let j
-		for (j = 100; j < 200; j++) {
-		let div = document.createElement("div")
-		div.className = "pixel"
-		div.id = j
-		div.style.width = "50px;"
-		div.style.height = "50px;"
-		div.style.backgroundColor = "red"
-		div.style.display = "inline"
-		document.getElementById("load").appendChild(div)	
-		}
-
-}
-
-</script>
+</div> <!-- /app -->
+<script src="lesspaint.js"></script>
 </body>
 </html>
