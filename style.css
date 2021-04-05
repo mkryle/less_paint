@@ -3,7 +3,6 @@
             margin: 0;
             padding: 0;
         }
-
         html {
             background-color: #e6e6e6;
         }
@@ -20,7 +19,6 @@
             background-color: #ffdead;
             float: left;
         }
-
     #theColorBlack {
         background-color: black;
         border: none;

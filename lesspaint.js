@@ -78,15 +78,18 @@
 
   })
 
-  function drawStuff(something){     //    work in progress
+  function drawStuff(something){                      // work in progress
 
-    console.log(something)
+  let palette = document.getElementsByClassName(load)
 
-    if (onmousedown) { 
+  palette.onmouseover=function()
+  {
+    let pixel = document.getElementById(something)    // find's the correct number
 
-    document.getElementById(something)
-    something.onmousedown = something.style.backgroundColor = "red"
-    
+      pixel.style.color = "purple"                    //   does not happen
+      console.log('Oh-YEEEAAHH!')                     //   no "ohyeah" ion log =(
   }
-    }
+  console.log(something)                              // log's correcct number
+}
   
+
