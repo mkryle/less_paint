@@ -7,27 +7,27 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
  <link href="style.css" rel="stylesheet"> 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="app">
+<div id="app"></div>
+<h1>Less Paint Project</h1>
 
-<button id="new" v-on:click="load_less_paint_pixels()">New Palette</button>
 
 <p>Choose color:</p> 
 <div id="colorPick">
-<button id="theColorBlack" v-on:click="pickBlack">&nbsp;</button>
-<button id="theColorWhite" v-on:click="pickWhite">&nbsp;</button>
-<button id="theColorRed" v-on:click="pickRed">&nbsp;</button>
-<button id="theColorBlue" v-on:click="pickBlue">&nbsp;</button>
-<button id="theColorGreen" v-on:click="pickGreen">&nbsp;</button>
-<button id="theColorYellow" v-on:click="pickYellow">&nbsp;</button>
+<button class="color" id="Black">&nbsp;</button>
+<button class="color" id="White">&nbsp;</button>
+<button class="color" id="Red">&nbsp;</button>
+<button class="color" id="Blue">&nbsp;</button>
+<button class="color" id="Green">&nbsp;</button>
+<button class="color" id="Yellow">&nbsp;</button>
 </div>
 
 <div id="load">
 
 </div> <!-- /load -->
-
+<button id="new" onClick="reset()">Reset</button><p>Made by Kryle</p>
 </div> <!-- /app -->
 <script src="lesspaint.js"></script>
 </body>
