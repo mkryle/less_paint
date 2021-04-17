@@ -1,4 +1,4 @@
-  var mousedown = 0;
+  let mousedown = 0;
   document.body.onmousedown = function() { 
   mousedown = 1;
   }
@@ -26,7 +26,7 @@
 
 $( document ).ready(function() {
   load_less_paint_pixels();
-  var color = "Black";
+  let color = "Black";
 
   $( ".pixel" ).mouseover( function() {
       if(mousedown == 1){
